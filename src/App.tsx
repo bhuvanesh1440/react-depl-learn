@@ -1,14 +1,12 @@
-import React, { useState } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import logo from "./logo.svg";
+import "./App.css";
 
 function App() {
-
   const [counter, setCounter] = useState(0);
 
-  const handleIncrement = () =>{
-    setCounter(val => val + 1)
-  }
+  const handleIncrement = () => setCounter((val) => val + 1);
+  const handleDecrement = () => setCounter((val) => val - 1);
 
   return (
     <div className="App">
@@ -18,7 +16,10 @@ function App() {
           Edit <code>src/App.tsx</code> and save to reload.
         </p>
         <h1 data-testid="counter">{counter}</h1>
-        <button onClick={handleIncrement}>Add</button>
+        <div>
+          <button onClick={handleIncrement}>Add</button>
+          <button onClick={handleDecrement}>Subtract</button>
+        </div>
         <a
           className="App-link"
           href="https://reactjs.org"
