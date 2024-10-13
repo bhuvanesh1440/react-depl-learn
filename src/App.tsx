@@ -17,7 +17,7 @@ function App() {
         </p>
         <h1 data-testid="counter">{counter}</h1>
         <div>
-          <button onClick={handleIncrement}>Add</button>
+          <button onClick={handleIncrement}>Add</button> <br />
           <button onClick={handleDecrement}>Subtract</button>
         </div>
         <a
